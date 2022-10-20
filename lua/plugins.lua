@@ -1,5 +1,3 @@
--- local fn = vim.fn
--- local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 local do_packer_sync = nil
 
 return require("packer").startup({
@@ -91,7 +89,6 @@ return require("packer").startup({
     use {
       "akinsho/toggleterm.nvim",
       tag = 'v2.*',
-      -- config = function() require("toggleterm").setup() end
     }
 
     use('manzeloth/live-server')

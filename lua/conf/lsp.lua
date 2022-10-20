@@ -1,13 +1,10 @@
 require("nvim-lsp-installer").setup({
   ensure_installed = {
     "cssls", "eslint", "intelephense", "jsonls", "tailwindcss", "tsserver",
-    "vuels", "yamlls", "sumneko_lua", "html", "astro", "pyright",-- "jdtls",
-  }
+    "vuels", "yamlls", "sumneko_lua", "html", "astro", "pyright", }
 })
 
 -- LSP config
--- https://github.com/neovim/nvim-lspconfig
--- See also :help lspconfig.
 
 local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -54,7 +51,6 @@ lsp.sumneko_lua.setup({
 })
 
 -- typescript
--- https://github.com/jose-elias-alvarez/typescript.nvim
 require("typescript").setup({
   server = { -- pass options to lspconfig's setup method
     on_attach = on_attach
