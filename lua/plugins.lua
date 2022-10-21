@@ -93,6 +93,13 @@ return require("packer").startup({
 
     use('manzeloth/live-server')
 
+    use {
+      'lewis6991/gitsigns.nvim',
+        config = function()
+          require('gitsigns').setup()
+        end
+      }
+
     if do_packer_sync then require("packer").sync() end
   end,
 
