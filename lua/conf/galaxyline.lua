@@ -4,7 +4,6 @@ local condition = require("galaxyline.condition")
 
 gl.short_line_list = { " " }
 
---local global_theme = "themes/" .. vim.g.nvchad_theme
 local colors = {
   white = "#abb2bf",
   darker_black = "#1b1f27",
@@ -49,10 +48,10 @@ gls.left[1] = {
 gls.left[2] = {
   statusIcon = {
     provider = function()
-      return "  "
+      return "   "
     end,
     highlight = { colors.statusline_bg, colors.nord_blue },
-    separator = "  ",
+    separator = "  ",
     separator_highlight = { colors.nord_blue, colors.lightbg }
   }
 }
@@ -155,11 +154,11 @@ gls.right[1] = {
 gls.right[2] = {
   GitIcon = {
     provider = function()
-      return " "
+      return "   "
     end,
     condition = require("galaxyline.provider_vcs").check_git_workspace,
     highlight = { colors.grey_fg2, colors.lightbg },
-    separator = "",
+    separator = " ",
     separator_highlight = { colors.lightbg, colors.statusline_bg }
   }
 }
@@ -175,10 +174,10 @@ gls.right[3] = {
 gls.right[4] = {
   viMode_icon = {
     provider = function()
-      return " "
+      return "   "
     end,
     highlight = { colors.statusline_bg, colors.red },
-    separator = " ",
+    separator = " ",
     separator_highlight = { colors.red, colors.lightbg }
   }
 }
@@ -210,9 +209,9 @@ gls.right[5] = {
 gls.right[6] = {
   some_icon = {
     provider = function()
-      return " "
+      return "  "
     end,
-    separator = "",
+    separator = " ",
     separator_highlight = { colors.green, colors.lightbg },
     highlight = { colors.lightbg, colors.green }
   }
@@ -230,7 +229,7 @@ gls.right[7] = {
         return "  Low "
       end
       local result, _ = math.modf((current_line / total_line) * 100)
-      return "  " .. result .. "% "
+      return "  " .. result .. "%".."/".. total_line
     end,
     highlight = { colors.green, colors.lightbg }
   }
