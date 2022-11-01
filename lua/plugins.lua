@@ -56,32 +56,10 @@ return require("packer").startup({
       requires = { 'othree/html5.vim', 'pangloss/vim-javascript' }
     })
 
-    use("MunifTanjim/prettier.nvim")
-
-    -- LSP
-    use("neovim/nvim-lspconfig")
 
     use({
-      "williamboman/nvim-lsp-installer",
-      require = "neovim/nvim-lspconfig"
-    })
-
-    use("hrsh7th/nvim-cmp")
-    local completion_sources = {
-      "hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for neovim's built-in language server client.
-      "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words.
-      "hrsh7th/cmp-path", -- nvim-cmp source for filesystem paths.
-      "hrsh7th/cmp-cmdline", -- nvim-cmp source for vim's cmdline.
-      "hrsh7th/cmp-nvim-lua" -- nvim-cmp source for neovim Lua API.
-    }
-    for _, plugin in ipairs(completion_sources) do
-      use({ plugin, requires = { "hrsh7th/nvim-cmp" } })
-    end
-
-    use("L3MON4D3/LuaSnip")
-    use({
-      "saadparwaiz1/cmp_luasnip",
-      requires = { "L3MON4D3/LuaSnip", "hrsh7th/nvim-cmp" }
+      'neoclide/coc.nvim',
+        branch = 'release'
     })
 
     use "terrortylor/nvim-comment"
@@ -95,10 +73,10 @@ return require("packer").startup({
 
     use {
       'lewis6991/gitsigns.nvim',
-        config = function()
-          require('gitsigns').setup()
-        end
-      }
+      config = function()
+        require('gitsigns').setup()
+      end
+    }
 
     if do_packer_sync then require("packer").sync() end
   end,

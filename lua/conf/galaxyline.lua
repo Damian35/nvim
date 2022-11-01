@@ -222,6 +222,7 @@ gls.right[7] = {
     provider = function()
       local current_line = vim.fn.line(".")
       local total_line = vim.fn.line("$")
+      local colum_line = vim.fn.col(".")
 
       if current_line == 1 then
         return "  Top "
@@ -229,7 +230,7 @@ gls.right[7] = {
         return "  Low "
       end
       local result, _ = math.modf((current_line / total_line) * 100)
-      return "  " .. result .. "%".."/".. total_line
+      return "  " .. result .. "%".." ".. "[ ".. colum_line .. "/" .. total_line .. " ]"
     end,
     highlight = { colors.green, colors.lightbg }
   }

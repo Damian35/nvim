@@ -31,3 +31,4 @@ set.writebackup = false
 set.swapfile = false
 set.termguicolors = true
 set.showmode = false
+set.updatetime = 300
