@@ -6,6 +6,7 @@ return require("packer").startup({
     use("wbthomason/packer.nvim")
 
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    use('p00f/nvim-ts-rainbow')
 
     use("navarasu/onedark.nvim")
 
@@ -70,6 +71,11 @@ return require("packer").startup({
     }
 
     use('manzeloth/live-server')
+
+    use({
+      'NTBBloodbath/rest.nvim',
+      requires = {'nvim-lua/plenary.nvim'}
+    })
 
     use {
       'lewis6991/gitsigns.nvim',
