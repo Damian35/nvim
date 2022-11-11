@@ -9,6 +9,8 @@
   // Coc Preferences
   "coc.preferences.formatOnSave": true,
   "coc.preferences.formatOnType": true,
+  // Snippets
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets/snipmate",
   // Lua
   "Lua.telemetry.enable": true,
   // Svelte
