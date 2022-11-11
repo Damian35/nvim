@@ -25,7 +25,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
     centralize_selection = false,
     width = 50,
     hide_root_folder = true,
-    side = "right",
+    side = "left",
     preserve_window_proportions = false,
     number = false,
     relativenumber = false,
@@ -133,7 +133,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
   },
   filters = {
     dotfiles = false,
-    custom = { '.git', 'node_modules' },
+    custom = { '.git', 'node_modules', '.vscode', 'package-lock.json' },
     exclude = {},
   },
   filesystem_watchers = {

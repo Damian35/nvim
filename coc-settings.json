@@ -1,10 +1,25 @@
 {
+  // Diagnostic
   "diagnostic.messageTarget": "float",
+  "diagnostic.format": "%message (%source%code)",
+  "diagnostic.floatConfig": {
+    "rounded": true,
+    "border": true
+  },
+  // Coc Preferences
   "coc.preferences.formatOnSave": true,
   "coc.preferences.formatOnType": true,
+  // Lua
   "Lua.telemetry.enable": true,
+  // Svelte
   "svelte.enable-ts-plugin": true,
+  // Typescript
   "typescript.preferences.importModuleSpecifier": "shortest",
+  // Suggest
+  "suggest.floatConfig": {
+    "border": true,
+    "rounded": true
+  },
   "suggest.completionItemKindLabels": {
     "keyword": "\uf1de",
     "variable": "\ue79b",
