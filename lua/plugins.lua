@@ -46,8 +46,6 @@ return require("packer").startup({
 
     use('kyazdani42/nvim-web-devicons')
 
-    use("Pocco81/AutoSave.nvim")
-
     use("jose-elias-alvarez/typescript.nvim")
 
     use('mfussenegger/nvim-jdtls')
@@ -60,7 +58,7 @@ return require("packer").startup({
 
     use({
       'neoclide/coc.nvim',
-        branch = 'release'
+      branch = 'release'
     })
 
     use "terrortylor/nvim-comment"
@@ -74,7 +72,7 @@ return require("packer").startup({
 
     use({
       'NTBBloodbath/rest.nvim',
-      requires = {'nvim-lua/plenary.nvim'}
+      requires = { 'nvim-lua/plenary.nvim' }
     })
 
     use {
