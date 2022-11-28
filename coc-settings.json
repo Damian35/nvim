@@ -12,10 +12,10 @@
   // Snippets
   "snippets.userSnippetsDirectory": "~/.config/nvim/snippets/snipmate",
   // Emmet
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "typescript": "typescriptreact",
-  },
+  //  "emmet.includeLanguages": {
+  //    "javascript": "javascriptreact",
+  //    "typescript": "typescriptreact"
+  //  },
   // Lua
   "Lua.telemetry.enable": true,
   // Svelte

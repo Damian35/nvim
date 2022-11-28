@@ -2,33 +2,36 @@ local set = vim.opt
 local g = vim.g
 
 -- Global
+
 g.mapleader = ' '
 g.maplocalleader = '++'
 
 -- Opt
-set.clipboard = "unnamedplus,unnamed" -- ALWAYS use the clipboard for ALL operations
-set.expandtab = true -- Tabs are spaces, not tabs
-set.ff = "unix" -- Use Unix as the standard file type
-set.gdefault = true -- Add g (global) to substitute operations, :s/pattern/replacement/
-set.history = 10000 -- Sets how many lines of history VIM has to remember
-set.lazyredraw = true -- Don't redraw while executing macros (good performance config)
-set.mouse = "a" -- Mouse support in all modes
-set.number = true -- Line numbers on
-set.relativenumber = true -- Use relative numbers instead of absolute
-set.scrolloff = 5 -- Minimal number of screen lines to keep above and below the cursor.
-set.shiftwidth = 2 -- Use indents of x spaces
-set.showmatch = true -- Show matching brackets/parenthesis
-set.signcolumn = "yes" -- Fixed space on the left for git and linting signs, otherwise it 'jumps'
-set.smartindent = false -- Smart indent
-set.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing editing
+
+set.clipboard = "unnamedplus,unnamed"
+set.expandtab = true
+set.ff = "unix"
+set.gdefault = true
+set.history = 10000
+set.lazyredraw = true
+set.mouse = nil
+set.number = true
+set.relativenumber = true
+set.scrolloff = 5
+set.shiftwidth = 2
+set.showmatch = true
+set.signcolumn = "yes"
+set.smartindent = false
+set.softtabstop = 2
 set.splitbelow = true
 set.splitright = true
-set.undofile = true -- saves undo history to an undo file, so it persists
-set.virtualedit = "block" -- If you need to define a block in visual block mode with bounds outsi    de the actual text (that is, past the end of lines), you can allow this with:
-set.wrap = false -- Don't wrap long lines
+set.undofile = true
+set.virtualedit = "block"
+set.wrap = false
 set.backup = false
 set.writebackup = false
 set.swapfile = false
 set.termguicolors = true
 set.showmode = false
 set.updatetime = 300
+set.cursorline = true
