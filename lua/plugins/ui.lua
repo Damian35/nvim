@@ -62,7 +62,7 @@ return {
         lualine_b = { { "filename", file_status = true, path = 0 } },
         lualine_c = { "diff" },
         lualine_x = {
-          "filename",
+          "filetype",
           "branch",
           { "diagnostics", symbols = { error = " ", warn = " ", hint = " " } },
         },
