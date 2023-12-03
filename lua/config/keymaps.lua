@@ -8,5 +8,3 @@ keymaps.set("n", "<leader>qq", ":bd<CR>", opts)
 keymaps.set("n", "<leader>sj", ":bp<CR>", opts)
 keymaps.set("n", "<leader>sk", ":bn<CR>", opts)
 keymaps.set("n", "<leader>cc", ":nohlsearch<CR>", opts)
-
-keymaps.set("n", "dw", "vb_d")

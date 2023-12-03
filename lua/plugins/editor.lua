@@ -2,6 +2,7 @@ return {
   "telescope.nvim",
   dependencies = {
     "nvim-telescope/telescope-file-browser.nvim",
+    "nvim-telescope/telescope-media-files.nvim",
   },
   keys = {
     {
@@ -63,8 +64,18 @@ return {
           },
         },
       },
+      media_files = {
+        filetypes = {
+          "png",
+          "webp",
+          "jpg",
+          "jpeg",
+        },
+        find_cmd = "rg",
+      },
     }
     telescope.setup(opts)
     require("telescope").load_extension("file_browser")
+    require("telescope").load_extension("media_files")
   end,
 }
